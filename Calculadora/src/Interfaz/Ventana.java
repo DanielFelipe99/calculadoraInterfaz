@@ -4,6 +4,10 @@
  */
 package Interfaz;
 
+import java.awt.Dimension;
+
+
+
 /**
  *
  * @author sistemas
@@ -13,9 +17,15 @@ public class Ventana extends javax.swing.JFrame {
     /**
      * Creates new form Ventana
      */
+    int suma;
+    
     public Ventana() {
         initComponents();
-        //inicializarComponentes();
+        this.setSize(new Dimension(310,400));
+        this.setMinimumSize(new Dimension(300,400));
+        this.setTitle("Calculad0r4 :3");
+        this.setLocationRelativeTo(null);
+        
     }
     
     
@@ -31,23 +41,24 @@ public class Ventana extends javax.swing.JFrame {
         pantalla = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
+        btn7 = new javax.swing.JButton();
+        btn8 = new javax.swing.JButton();
+        btn9 = new javax.swing.JButton();
+        btn4 = new javax.swing.JButton();
+        btn5 = new javax.swing.JButton();
+        btn6 = new javax.swing.JButton();
+        btn1 = new javax.swing.JButton();
+        btn2 = new javax.swing.JButton();
+        btn3 = new javax.swing.JButton();
+        btnComa = new javax.swing.JButton();
+        btn0 = new javax.swing.JButton();
+        btnIgual = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        btnSuma = new javax.swing.JButton();
-        btnResta = new javax.swing.JButton();
-        btnMultiplicacion = new javax.swing.JButton();
+        btnBorrar = new javax.swing.JButton();
         btnDivision = new javax.swing.JButton();
+        btnMultiplicacion = new javax.swing.JButton();
+        btnResta = new javax.swing.JButton();
+        btnSuma = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,131 +69,116 @@ public class Ventana extends javax.swing.JFrame {
 
         jPanel1.setLayout(new java.awt.BorderLayout());
 
-        jPanel2.setLayout(new java.awt.GridLayout(0, 3, 1, 1));
+        jPanel2.setMaximumSize(new java.awt.Dimension(3276, 3276));
+        jPanel2.setLayout(new java.awt.GridLayout(0, 3));
 
-        jButton1.setText("9");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btn7.setText("7");
+        btn7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btn7ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1);
+        jPanel2.add(btn7);
 
-        jButton2.setText("8");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btn8.setText("8");
+        btn8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btn8ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton2);
+        jPanel2.add(btn8);
 
-        jButton3.setText("7");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btn9.setText("9");
+        btn9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btn9ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton3);
+        jPanel2.add(btn9);
 
-        jButton4.setText("6");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btn4.setText("4");
+        btn4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btn4ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton4);
+        jPanel2.add(btn4);
 
-        jButton5.setText("5");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        btn5.setText("5");
+        btn5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                btn5ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton5);
+        jPanel2.add(btn5);
 
-        jButton6.setText("4");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        btn6.setText("6");
+        btn6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                btn6ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton6);
+        jPanel2.add(btn6);
 
-        jButton7.setText("3");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        btn1.setText("1");
+        btn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                btn1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton7);
+        jPanel2.add(btn1);
 
-        jButton8.setText("2");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        btn2.setText("2");
+        btn2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                btn2ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton8);
+        jPanel2.add(btn2);
 
-        jButton9.setText("1");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        btn3.setText("3");
+        btn3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                btn3ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton9);
+        jPanel2.add(btn3);
 
-        jButton10.setText(",");
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
+        btnComa.setText(",");
+        btnComa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                btnComaActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton10);
+        jPanel2.add(btnComa);
 
-        jButton11.setText("0");
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
+        btn0.setText("0");
+        btn0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
+                btn0ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton11);
+        jPanel2.add(btn0);
 
-        jButton12.setText("=");
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
+        btnIgual.setText("=");
+        btnIgual.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
+                btnIgualActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton12);
+        jPanel2.add(btnIgual);
 
         jPanel1.add(jPanel2, java.awt.BorderLayout.CENTER);
 
         jPanel3.setLayout(new java.awt.GridLayout(0, 1));
 
-        btnSuma.setText("+");
-        btnSuma.addActionListener(new java.awt.event.ActionListener() {
+        btnBorrar.setText("Borrar");
+        btnBorrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSumaActionPerformed(evt);
+                btnBorrarActionPerformed(evt);
             }
         });
-        jPanel3.add(btnSuma);
-
-        btnResta.setText("-");
-        btnResta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRestaActionPerformed(evt);
-            }
-        });
-        jPanel3.add(btnResta);
-
-        btnMultiplicacion.setText("x");
-        btnMultiplicacion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMultiplicacionActionPerformed(evt);
-            }
-        });
-        jPanel3.add(btnMultiplicacion);
+        jPanel3.add(btnBorrar);
 
         btnDivision.setText("/");
         btnDivision.addActionListener(new java.awt.event.ActionListener() {
@@ -192,82 +188,134 @@ public class Ventana extends javax.swing.JFrame {
         });
         jPanel3.add(btnDivision);
 
+        btnMultiplicacion.setText("x");
+        btnMultiplicacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMultiplicacionActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btnMultiplicacion);
+
+        btnResta.setText("-");
+        btnResta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRestaActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btnResta);
+
+        btnSuma.setText("+");
+        btnSuma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSumaActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btnSuma);
+
         jPanel1.add(jPanel3, java.awt.BorderLayout.LINE_END);
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    
+    
+    
+    private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn9ActionPerformed
+        
+        pantalla.setText(pantalla.getText()+"9");
+        
+    }//GEN-LAST:event_btn9ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       pantalla.setText("9");
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
+       
+        pantalla.setText(pantalla.getText()+"8");
+        
+    }//GEN-LAST:event_btn8ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        pantalla.setText("8");
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
+       
+        pantalla.setText(pantalla.getText()+"7");
+    }//GEN-LAST:event_btn7ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        pantalla.setText("7");
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6ActionPerformed
+       
+        pantalla.setText(pantalla.getText()+"6");
+    }//GEN-LAST:event_btn6ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-       pantalla.setText("6");
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
+        
+        pantalla.setText(pantalla.getText()+"5");
+    }//GEN-LAST:event_btn5ActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        pantalla.setText("5");
-    }//GEN-LAST:event_jButton5ActionPerformed
+    private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
+        
+        pantalla.setText(pantalla.getText()+"4");
+    }//GEN-LAST:event_btn4ActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        pantalla.setText("4");
-    }//GEN-LAST:event_jButton6ActionPerformed
+    private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
+        
+        pantalla.setText(pantalla.getText()+"3");
+    }//GEN-LAST:event_btn3ActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        pantalla.setText("3");
-    }//GEN-LAST:event_jButton7ActionPerformed
+    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
+        
+        pantalla.setText(pantalla.getText()+"2");
+    }//GEN-LAST:event_btn2ActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        pantalla.setText("2");
-    }//GEN-LAST:event_jButton8ActionPerformed
+    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
+        
+        pantalla.setText(pantalla.getText()+"1");
+    }//GEN-LAST:event_btn1ActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        pantalla.setText("1");
-    }//GEN-LAST:event_jButton9ActionPerformed
+    private void btnComaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComaActionPerformed
+        
+        pantalla.setText(pantalla.getText()+",");
+    }//GEN-LAST:event_btnComaActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        pantalla.setText(",");
-    }//GEN-LAST:event_jButton10ActionPerformed
+    private void btn0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn0ActionPerformed
+        
+        pantalla.setText(pantalla.getText()+"0");
+    }//GEN-LAST:event_btn0ActionPerformed
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        pantalla.setText("0");
-    }//GEN-LAST:event_jButton11ActionPerformed
-
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        pantalla.setText("=");
-    }//GEN-LAST:event_jButton12ActionPerformed
+    private void btnIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIgualActionPerformed
+        pantalla.setText("" + suma);
+       
+        
+    }//GEN-LAST:event_btnIgualActionPerformed
 
     private void btnSumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSumaActionPerformed
         // TODO add your handling code here:
+         //pantalla.setText(pantalla.getText()+"+");
+        int a = Integer.parseInt(pantalla.getText());
+        int b = Integer.parseInt(pantalla.getText());
+        
+        suma = a + b;
+        
+        
     }//GEN-LAST:event_btnSumaActionPerformed
 
     private void btnRestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRestaActionPerformed
-        // TODO add your handling code here:
+         pantalla.setText(pantalla.getText()+"-");
+    
     }//GEN-LAST:event_btnRestaActionPerformed
 
     private void btnMultiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicacionActionPerformed
         // TODO add your handling code here:
+         pantalla.setText(pantalla.getText()+"x");
     }//GEN-LAST:event_btnMultiplicacionActionPerformed
 
     private void btnDivisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDivisionActionPerformed
         // TODO add your handling code here:
+         pantalla.setText(pantalla.getText()+"/");
     }//GEN-LAST:event_btnDivisionActionPerformed
+
+    private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBorrarActionPerformed
     
-    /**public void inicializarComponentes(){
-        super.setResizable(false);
-        
-    }
-    */
+  
+    
     /**
      * @param args the command line arguments
      */
@@ -305,22 +353,23 @@ public class Ventana extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn0;
+    private javax.swing.JButton btn1;
+    private javax.swing.JButton btn2;
+    private javax.swing.JButton btn3;
+    private javax.swing.JButton btn4;
+    private javax.swing.JButton btn5;
+    private javax.swing.JButton btn6;
+    private javax.swing.JButton btn7;
+    private javax.swing.JButton btn8;
+    private javax.swing.JButton btn9;
+    private javax.swing.JButton btnBorrar;
+    private javax.swing.JButton btnComa;
     private javax.swing.JButton btnDivision;
+    private javax.swing.JButton btnIgual;
     private javax.swing.JButton btnMultiplicacion;
     private javax.swing.JButton btnResta;
     private javax.swing.JButton btnSuma;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

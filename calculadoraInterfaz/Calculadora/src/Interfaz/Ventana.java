@@ -4,10 +4,7 @@
  */
 package Interfaz;
 
-import Controlador.Operaciones;
 import java.awt.Dimension;
-
-
 
 
 
@@ -20,10 +17,7 @@ public class Ventana extends javax.swing.JFrame {
     /**
      * Creates new form Ventana
      */
-    
-    private Operaciones operaciones;
-    private int num1;
-    private int num2; 
+    int suma;
     
     public Ventana() {
         initComponents();
@@ -31,7 +25,6 @@ public class Ventana extends javax.swing.JFrame {
         this.setMinimumSize(new Dimension(300,400));
         this.setTitle("Calculad0r4 :3");
         this.setLocationRelativeTo(null);
-        operaciones = new Operaciones(); 
         
     }
     
@@ -226,148 +219,99 @@ public class Ventana extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
-    /** 
-      *Concatenar
-      * metodo para concatenar  los digitos en la calculadora 
-      * @param numero -> es el atributo que se ingresa
-      * @return pant -> variable resultado de la concatenacion 
-    */  
-    public String Concatenar(String numero){//---> se ingresa un "numero" 
-        String pant = pantalla.getText(); //---> se trae en pant lo que esta en pantalla
-        if(pant.equals("0")){//---> si pant es igual a 0
-            pant = numero;//---> entonces pant = a numero
-        }else{
-            pant = pant + numero;//---> sino pant + numero se concatenan 
-        }
-        return pant;
-    }
+    
     
     private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn9ActionPerformed
-       
-        pantalla.setText(Concatenar("9"));
+        
+        pantalla.setText(pantalla.getText()+"9");
+        
     }//GEN-LAST:event_btn9ActionPerformed
 
     private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
        
-        pantalla.setText(Concatenar("8"));
+        pantalla.setText(pantalla.getText()+"8");
         
     }//GEN-LAST:event_btn8ActionPerformed
 
     private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
        
-        pantalla.setText(Concatenar("7"));
+        pantalla.setText(pantalla.getText()+"7");
     }//GEN-LAST:event_btn7ActionPerformed
 
     private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6ActionPerformed
        
-        pantalla.setText(Concatenar("6"));
+        pantalla.setText(pantalla.getText()+"6");
     }//GEN-LAST:event_btn6ActionPerformed
 
     private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
         
-        pantalla.setText(Concatenar("5"));
+        pantalla.setText(pantalla.getText()+"5");
     }//GEN-LAST:event_btn5ActionPerformed
 
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
         
-        pantalla.setText(Concatenar("4"));
+        pantalla.setText(pantalla.getText()+"4");
     }//GEN-LAST:event_btn4ActionPerformed
 
     private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
         
-        pantalla.setText(Concatenar("3"));
+        pantalla.setText(pantalla.getText()+"3");
     }//GEN-LAST:event_btn3ActionPerformed
 
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
         
-        pantalla.setText(Concatenar("2"));
+        pantalla.setText(pantalla.getText()+"2");
     }//GEN-LAST:event_btn2ActionPerformed
 
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
         
-        pantalla.setText(Concatenar("1"));
+        pantalla.setText(pantalla.getText()+"1");
     }//GEN-LAST:event_btn1ActionPerformed
 
     private void btnComaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComaActionPerformed
         
-        pantalla.setText(Concatenar(","));
-        
+        pantalla.setText(pantalla.getText()+",");
     }//GEN-LAST:event_btnComaActionPerformed
 
     private void btn0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn0ActionPerformed
         
-        pantalla.setText(Concatenar("0"));
+        pantalla.setText(pantalla.getText()+"0");
     }//GEN-LAST:event_btn0ActionPerformed
 
-    
-    public String Calcular(String signo){
-     
-      
-      String respuesta = "";
-      
-        if(signo.equals("+")){
-            respuesta = operaciones.Sumar(num1, num2);
-        }
-
-        if(signo.equals("-")){
-           respuesta= operaciones.Restar(num1, num2);
-            //pantalla.setText(operaciones.Restar(num1, num2));
-        }
-        
-        
-        if(signo.equals("x")){
-            respuesta= operaciones.Multiplicar(num1, num2);
-            //pantalla.setText(operaciones.Multiplicar(num1, num2));
-        }
-
-        if(signo.equals("/")){
-            respuesta= operaciones.Dividir(num1, num2);
-            //pantalla.setText(operaciones.Dividir(num1, num2));
-        }
- 
-        return respuesta;
-    
-    
-    }   
-    
-    
     private void btnIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIgualActionPerformed
-        //pantalla.setText("" + suma);
-        num2 = Integer.parseInt(pantalla.getText());
-
-        pantalla.setText(Calcular("+"));
-        pantalla.setText(Calcular("-"));
+        pantalla.setText("" + suma);
        
+        
     }//GEN-LAST:event_btnIgualActionPerformed
 
     private void btnSumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSumaActionPerformed
         // TODO add your handling code here:
-       //pantalla.setText(Concatenar("+"));
-        num1 = Integer.parseInt(pantalla.getText()); //----> Se convierte el Int en String 
-        pantalla.setText("0");
+         //pantalla.setText(pantalla.getText()+"+");
+        int a = Integer.parseInt(pantalla.getText());
+        int b = Integer.parseInt(pantalla.getText());
+        
+        suma = a + b;
+        
+        
     }//GEN-LAST:event_btnSumaActionPerformed
 
     private void btnRestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRestaActionPerformed
-        num1 = Integer.parseInt(pantalla.getText());
-        pantalla.setText("0");
-
+         pantalla.setText(pantalla.getText()+"-");
+    
     }//GEN-LAST:event_btnRestaActionPerformed
 
     private void btnMultiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicacionActionPerformed
         // TODO add your handling code here:
-        num1 = Integer.parseInt(pantalla.getText());
-        pantalla.setText("0");
+         pantalla.setText(pantalla.getText()+"x");
     }//GEN-LAST:event_btnMultiplicacionActionPerformed
 
     private void btnDivisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDivisionActionPerformed
         // TODO add your handling code here:
-        num1 = Integer.parseInt(pantalla.getText());
-        pantalla.setText("0");
+         pantalla.setText(pantalla.getText()+"/");
     }//GEN-LAST:event_btnDivisionActionPerformed
 
     private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
         // TODO add your handling code here:
-        pantalla.setText("0");
     }//GEN-LAST:event_btnBorrarActionPerformed
     
   
